@@ -18,7 +18,7 @@ body {
 }
 
 section{
-    max-width: 80%;
+    max-width: 90%;
     margin:0 auto;
     
     /*margin: 10% 5% 10% 5%;    */
@@ -35,7 +35,7 @@ div{
 div#principal{
     width: 100%;
     text-shadow: 3px 3px 5px rgb(132, 77, 204);
-    font-size: 210%;
+    font-size: 250%;
     display: inline-flex;
 }
 
@@ -132,11 +132,11 @@ div.cx-02{
 div.rodape{
     /*display: flex;
     justify-content: center;*/
+    position: static;
     border-top: 2px dashed purple;
     background-color: purple;
     color: rgb(190, 172, 214);
     font-size: 16pt;
-    position: static;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -178,6 +178,7 @@ nav.menu{
     justify-content: center;
     margin: auto;
     width: auto;
+    background-color: purple;
     /*top: 0;*/
 }
 
@@ -237,7 +238,7 @@ ul.horizontal li a {
     border-bottom: 1px solid purple;
     border-right: 1px solid purple;
     color: rgb(236, 181, 161);
-    background-color: purple;
+    
     text-shadow: 1px 1px 3px rgb(231, 169, 146);
     /*#dd987f;*/
 }
