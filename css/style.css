@@ -2,7 +2,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: normal;
     font-size: 18pt;
-    font-weight: 100;
+    font-weight:400;
     font-display: auto;
     font-variant: normal;
 
@@ -35,7 +35,7 @@ div{
 div#principal{
     width: 100%;
     text-shadow: 3px 3px 5px rgb(132, 77, 204);
-    font-size: 250%;
+    font-size: 300%;
     display: inline-flex;
 }
 
