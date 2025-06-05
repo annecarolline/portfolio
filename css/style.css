@@ -6,6 +6,9 @@ body {
     font-display: auto;
     font-variant: normal;
 
+    max-width: max-content;
+    max-height: max-content;
+
     color: purple;
     text-align: left;
     text-indent: 1px;
@@ -123,7 +126,7 @@ div.cx-02{
 div.rodape{
     border-top: 2px dashed purple;
     background-color: purple;
-    position: fixed;
+    position: static;
     left: 0;
     bottom: 0;
     width: 100%;
