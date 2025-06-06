@@ -11,7 +11,6 @@ body {
     text-align: left;
     text-indent: 1px;
     margin: 0px;
-    
     background-image: linear-gradient(to right, rgb(185, 161, 216), coral);
 }
 
@@ -294,5 +293,5 @@ ul.horizontal li a:hover{
     opacity: 0.9;
     color: rgb(231, 190, 175);
     text-decoration-line: underline;
-    text-decoration-style: dashed; /*wavy;*/
+    text-decoration-style: dashed; 
 }
