@@ -28,7 +28,7 @@ div{
     float: left;
 }
 
-div#principal{
+div#topo{
     width: 100%;
     text-shadow: 3px 3px 5px rgb(132, 77, 204);
     font-size: 300%;
@@ -57,6 +57,22 @@ div#titulo{
     text-decoration-thickness: 2px; 
 }
 
+.bd-parc-redonda{
+    border-radius: 35px 0 35px 0;
+}
+
+.bd-traco-roxa{
+    border: 2px dashed purple;
+}
+
+.mg-tp-20{
+    margin-top: 20px;
+}
+
+.mg-rg-20{
+    margin-right: 20px;
+}
+
 div#titulo span:hover{
     display: inline-flex;
 }
@@ -75,8 +91,6 @@ div.img-02{
     width: 35%;
     margin-left: 10px;
     height: 500px;
-    width: 35%;
-    margin-left: 10px;
     opacity: 0.7;
 }
 
@@ -85,8 +99,6 @@ img.lateral-01{
     right: 0;
     width: 75%;
     height: 50%;
-    border: 2px dashed purple;
-    border-radius: 0;
 }
 
 img.lateral-02{
@@ -95,8 +107,11 @@ img.lateral-02{
     bottom: 0;
     width: 75%;
     height: 45%;
-    border: 2px dashed purple;
-    border-radius: 0;
+}
+
+img.lateral-03{
+    width: 90%; 
+    height: 95%;
 }
 
 img.interna{
@@ -132,13 +147,11 @@ img.icone{
 
 div.cx-01{
     padding: 18px 13px 18px 13px;
-    border-top: 3px solid coral;
-    border-right: 2px solid coral;
-    border-bottom: 3px solid coral;
-    border-left: 2px solid coral;
-    border-radius: 10%;
-    box-shadow: 2px 2px 3px 3px;
-    width: 100%;
+    border-top: 3px dashed coral;
+    border-right: 0;
+    border-bottom: 0;
+    border-left: 2px dashed coral;
+    box-shadow: 2px 2px 0 0;
     height: 50%;
     margin-bottom: 20px;
     text-align: justify;
@@ -148,18 +161,21 @@ div.cx-01{
 
 div.cx-02{
     padding: 18px 13px 18px 13px;
-    border-top: 0;
-    border-right: 2px dashed rgb(159, 124, 206);
+    border-top: 2px dashed rgb(159, 124, 206);
+    border-right: 0;
     border-bottom: 0;
     border-left: 2px dashed rgb(159, 124, 206);
-    border-radius: 3px;
-    box-shadow: 2px 2px 3px 3px;
+    box-shadow: 2px 2px 0 0;
     width: 60%;
     height: 50%;
     margin-bottom: 20px;
     text-align: justify;
 
     background-image: linear-gradient(to bottom right, rgb(228, 214, 245), rgb(190, 172, 214));
+}
+
+div#habilidades{
+    width: 60%;
 }
 
 div.rodape{
@@ -277,6 +293,6 @@ ul.horizontal li a {
 ul.horizontal li a:hover{
     opacity: 0.9;
     color: rgb(231, 190, 175);
-    text-decoration-line: underline overline;
-    text-decoration-style: solid; /*wavy;*/
+    text-decoration-line: underline;
+    text-decoration-style: dashed; /*wavy;*/
 }
