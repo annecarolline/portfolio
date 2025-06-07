@@ -2,19 +2,21 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>annecarolldev - portfolio</title>
+		<title>annecarolldev - Portfólio</title>
 
 		<link rel="icon" href="./img/star.ico">
 		<link rel="stylesheet" href="./css/style.css">
 	</head>
 	<body>
-		<nav class="menu">
-			<ul class="horizontal">
-				<li><a class="active" href="#olamundo">Olá, mundo!</a></li>
-				<li><a href="#experiencia">Experiência</a></li>
-				<li><a href="#habilidades">Habilidades</a></li>
-			</ul>
-		</nav>
+		<header>
+			<nav class="menu">
+				<ul class="horizontal">
+					<li><a class="active" href="#olamundo">Olá, mundo!</a></li>
+					<li><a href="#experiencia">Experiência</a></li>
+					<li><a href="#habilidades">Habilidades</a></li>
+				</ul>
+			</nav>
+		</header>
 		<section>
 			<div id="topo">
 				<div class="img">
@@ -27,20 +29,20 @@
 				</div>
 			</div>
 			<div id="olamundo" class="cx-01 bd-parc-redonda">
-				<h3>Olá, sou Anne Carolline.</h3>
-				<h4>Uma Desenvolvedora Fullstack.</h4>
-				<p>Apaixonada por tecnologia, curiosa por natureza e sempre buscando priorizar código 
+				<h2 class="toast">Olá, sou Anne Carolline.</h2>
+				<h3 class="toast">Uma Desenvolvedora Fullstack.</h3>
+				<p class="toast">Apaixonada por tecnologia, curiosa por natureza e sempre buscando priorizar código 
 					limpo e eficiente, e boa experiência de usuário.</p>
 			</div>
 
 			<hr>
 
-			<h2 class="central txt-categoria">Experiência</h2>
-			<div>
-				<div id="experiencia" class="cx-02 bd-parc-redonda">
-					<h4>Desde 2008, atuo como desenvolvedora de software, tanto fullstack 
+			<div id="experiencia">
+				<h1 class="central txt-categoria">Experiência</h1>
+				<div id="txt-experiencia" class="cx-02 bd-parc-redonda">
+					<h4 class="toast">Desde 2008, atuo como desenvolvedora de software, tanto fullstack 
 						quanto backend. </h4>
-					<p>São mais de 15 anos no mercado de TI. 
+					<p class="toast">São mais de 15 anos no mercado de TI. 
 						O que me trouxe experiência em desenvolvimento backend, desenvolvimento frontend, UI/UX, 
 						arquitetura de microserviços, TDD, gerenciamento de diversos bancos de dados, 
 						modelagem de banco de dados, modelagem de processos, uso de algumas linguagens de programação
@@ -57,63 +59,63 @@
 
 			<hr>
 
-			<h2 class="central txt-categoria">Habilidades</h2>
-			<div>
+			<div id="habilidades">
+				<h1 class="central txt-categoria">Habilidades</h1>
 				<div class="img" style="width: 35%;">
 					<img class="lateral-03 bd-parc-redonda bd-traco-roxa" src="./img/dev-software.jpg">
 					<img class="lateral-03 bd-parc-redonda bd-traco-roxa mg-tp-20" src="./img/full-stack-developer.png">
 				</div>
-				<div id="habilidades" class="cx-01 bd-parc-redonda">
-					<h4>Principais Habilidades:</h4>
-					<p>
+				<div id="txt-habilidades" class="cx-01 bd-parc-redonda">
+					<h4 class="toast">Principais Habilidades:</h4>
+					<p class="toast">
 						<details>
 							<summary>Backend</summary>
 							<span> ✔ PHP, C#, APIs REST, Node.js</span>
 						</details>
 					</p>
-					<p>
+					<p class="toast">
 						<details>
 							<summary> Frontend</summary>
 							<span>✔ JavaScript, JQuery, Vue.js, React</span>
 						</details>
 					</p>
-					<p>
+					<p class="toast">
 						<details>
 							<summary>Banco de Dados</summary>
 							<span>✔ PostgreSQL, MySQL, MariaDB, SqlServer, Oracle, MongoDB, Redis</span>
 						</details>
 					</p>
-					<p>
+					<p class="toast">
 						<details>
 							<summary>Arquitetura</summary>
 							<span>✔ MVC, Microsserviços, Clean Architecture, SOLID, DDD, TDD</span>
 						</details>
 					</p>
-					<p>
+					<p class="toast">
 						<details>
 							<summary>Controle de versão</summary>
 							<span>✔ Git, SVN, Migrations</span>
 						</details>
 					</p>
-					<p>
+					<p class="toast">
 						<details>
 							<summary>Gerenciamento de dependências</summary>
 							<span>✔ Composer, npm</span>
 						</details>
 					</p>
-					<p>
+					<p class="toast">
 						<details>
 							<summary>Testes e Documentação</summary>
 							<span>✔ Swagger, Postman, PHPUnit</span>
 						</details>
 					</p>
-					<p>
+					<p class="toast">
 						<details>
 							<summary>DevOps & Cloud</summary>
 							<span>✔ Docker, CI/CD (GitHub Actions), Azure, Jira, Jenkins, SonarQube, New Relic</span>
 						</details>
 					</p>
-					<p>
+					<p class="toast">
 						<details>
 							<summary>Outras</summary>
 							<span>✔ Code reviews, levantamento de requisitos com cliente, modelagem de banco de dados e processos</span>
@@ -121,15 +123,24 @@
 					</p>
 				</div>
 			</div>
-			<hr>
+			<!--hr-->
 		</section>
 	</body>
 	<footer>
 		<div class="rodape">
-			<p>Onde me encontrar:</p>
-			
-			<a class="linkrodape" href="https://www.linkedin.com/in/annecarolldev" target="_blank"><img class="icone" src="./img/icons/linkedin.svg" alt="LinkedIn"></a>
-			<a class="linkrodape" href="https://github.com/annecarolline" target="_blank"><img class="icone" src="./img/icons/github.svg" alt="Github"></a>			
+			<div class="txt">
+				<p>Onde me encontrar:</p>
+			</div>
+			<div class="link">
+				<a class="linkrodape" href="https://www.linkedin.com/in/annecarolldev" target="_blank"><img class="icone" src="./img/icons/linkedin.svg" alt="LinkedIn"></a>
+				<span>LinkedIn</span></br>
+				<span>annecarolldev</span>
+			</div>
+			<div class="link">
+				<a class="linkrodape" href="https://github.com/annecarolline" target="_blank"><img class="icone" src="./img/icons/github.svg" alt="Github"></a>			
+				<span>Github</span></br>
+				<span>annecarolline</span>
+			</div>
 		</div>
 	</footer>
 </html>
