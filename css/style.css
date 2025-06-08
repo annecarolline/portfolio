@@ -51,6 +51,7 @@ div{
 
 div#topo{
     width: 100%;
+    margin-top: 10%;
     text-shadow: 3px 3px 5px rgb(132, 77, 204);
     font-size: 300%;
     display: inline-flex;
@@ -160,6 +161,8 @@ div.link{
     margin-left: 10px;
     width: 30%;
     max-width: fit-content;
+    border-left: 1px solid;
+    padding-left: 10px;
 }
 
 div.img-02{
