@@ -16,7 +16,7 @@ body {
     animation-name: pulse;
     animation-duration: 25s; 
     animation-timing-function: linear; 
-    animation-delay: 0s;
+    animation-delay: 0;
     animation-direction: alternate;  
     animation-iteration-count: infinite; 
 }
@@ -25,23 +25,14 @@ body {
     0% {
         background-image: linear-gradient(to right, rgb(176, 147, 214), coral);
     }
-    25% {
-        background-image: linear-gradient(to right, rgb(185, 161, 216), rgb(185, 161, 216), rgb(192, 175, 214), rgb(247, 160, 128),rgb(247, 160, 128),rgb(247, 160, 128),rgb(192, 175, 214));
-    }
     35% {
-        background-image: linear-gradient(to right, rgb(192, 175, 214), rgb(192, 175, 214), rgb(247, 160, 128), rgb(247, 160, 128),rgb(247, 160, 128),rgb(192, 175, 214),rgb(192, 175, 214));
+        background-image: linear-gradient(to right, rgb(194, 174, 223), rgb(176, 147, 214));
     }
-    50%{
-        background-image: linear-gradient(to right, rgb(192, 175, 214), rgb(250, 146, 108), rgb(247, 160, 128), rgb(247, 160, 128),rgb(247, 160, 128),rgb(192, 175, 214),rgb(185, 161, 216));
-    }
-    60% {
-        background-image: linear-gradient(to right, rgb(247, 160, 128), rgb(250, 146, 108),rgb(250, 146, 108),rgb(192, 175, 214),rgb(185, 161, 216),rgb(185, 161, 216));
-    }
-    75% {
-        background-image: linear-gradient(to right, rgb(250, 146, 108), rgb(250, 146, 108),rgb(250, 146, 108),rgb(185, 161, 216),rgb(185, 161, 216),rgb(185, 161, 216));        
+    65%{
+        background-image: linear-gradient(to right, coral, rgb(236, 158, 130));
     }
     100% {
-        background-image: linear-gradient(to right, coral, rgb(185, 161, 216));
+        background-image: linear-gradient(to right, coral, rgb(176, 147, 214));
     }
 }
 
