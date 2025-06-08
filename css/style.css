@@ -226,6 +226,12 @@ img.logo:hover{
 img.icone{
     width: 45%;
     cursor: pointer;
+    transition: transform 2s;
+}
+
+img.icone:hover{
+    transform: rotateY(360deg);
+    cursor: pointer;
 }
 
 div.cx-01{
@@ -261,7 +267,7 @@ div#txt-habilidades{
     width: 60%;
 }
 
-div.rodape{
+div#rodape{
     /*display: flex;
     justify-content: center;*/
     position: static;
