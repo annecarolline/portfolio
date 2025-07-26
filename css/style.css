@@ -1,7 +1,11 @@
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: normal;
-    font-size: 18pt;
+    font-size: 16pt;
     font-weight:400;
     font-display: auto;
     font-variant: normal;
@@ -13,10 +17,10 @@ body {
     margin: 0px;
     
     background-image: linear-gradient(to right, rgb(226, 181, 164),rgb(230, 151, 123), rgb(230, 151, 123),rgb(230, 151, 123), rgb(226, 181, 164));
-    /*animation: rotate-bg-color 10s infinite;*/
+    /* animation: rotate-bg-color 10s infinite; */
 }
 
-@keyframes rotate-bg-color {
+/* @keyframes rotate-bg-color {
     0% {
         background-color: rgb(161, 197, 226);
     }
@@ -50,6 +54,18 @@ body {
     100% {
         background-color: rgb(71, 65, 65);
     }
+} */
+
+.digitando{
+    animation: digitando 2s steps(40, end);
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: 3px;
+}
+
+@keyframes digitando{
+    0% {width: 0%; }
+    100% {width: 100%; }
 }
 
 ::-webkit-scrollbar {
@@ -208,11 +224,22 @@ div.img{
     opacity: 0.7;
 }
 
+@keyframes rotacao{
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    } 
+}
+
 img.logo{
     width: 100%;
     height: 90%;
     border: 2px solid purple;
     border-radius: 45%;
+    animation: rotacao 1s;
     transition: transform 2s;
 }
 
@@ -222,7 +249,7 @@ img.logo:hover{
 }
 
 img.icone{
-    width: 100%;
+    width: 250%;
     cursor: pointer;
     transition: transform 2s;
 }
@@ -426,7 +453,7 @@ a.linkrodape{
     width: auto;
     margin-top: 0;
     margin-bottom: 10px;
-    margin-right: 10px;
+    margin-right: 25px;
     margin-left: 10px;
 }
 
@@ -440,8 +467,18 @@ ul.horizontal li a {
 }
 
 ul.horizontal li a:hover{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 35px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    /* border: 0px solid rgba(255, 255, 255, 0.3); */
+    /*
     opacity: 0.9;
-    font-size: larger;
+    border-radius: 35px;
+    border: 1px solid rgba(230, 152, 123, 0.836);
+    background-color: rgba(230, 168, 146, 0.836);
+    */
 }
 
 .tooltip {
