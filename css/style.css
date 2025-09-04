@@ -1,3 +1,71 @@
+:root{
+    color-scheme: light dark;
+}
+
+.light{
+    color-scheme: light;
+    --cor-font-body: rgb(122, 66, 122);
+    --background-color-body: linear-gradient(to right, rgb(228, 171, 150), rgb(230, 151, 123), rgb(230, 151, 123), rgb(230, 151, 123), rgb(228, 171, 150));   /*rgb(241, 210, 181);*/
+    
+    --color-scrollbar-track: rgb(241, 135, 96);
+    --bg-color-rodape: rgb(241, 135, 96);
+    
+    --bd-color-tooltip: coral;
+    --color-tooltip: coral;
+
+    --bg-color-cx-topo: rgb(133, 86, 133);
+    --bd-color-cx-topo: rgb(133, 86, 133);
+    --bg-color-menu: rgb(133, 86, 133); 
+    --bg-color-tooltip: rgba(133, 86, 133, 0.836);
+    --bd-color-tooltip-after:rgb(133, 86, 133);
+
+    --color-txt-categoria: rgb(122, 66, 122);
+    --color-cx-interna: rgb(122, 66, 122);
+
+    --bd-color-menu:rgb(230 151 123 / 84%);
+    --ts-color-menu: rgb(230 151 123 / 84%);
+
+    --color-scrollbar-thumb: rgb(226, 181, 164);
+    --color-scrollbar-thumb-hover: rgb(204, 83, 39);
+    --color-text-shadow-topo: rgb(132, 77, 204);
+    --bs-color-cx-01: #dea69459;
+    --bg-color-bkg-opaco: rgba(0, 0, 0, 0.4); 
+    --color-bd-box: rgba(255, 255, 255, 0.3);
+    --color-rodape: purple;
+    --color-menu: #fff;
+}
+
+.dark{
+    color-scheme: dark;
+    --cor-font-body: rgb(229 127 90); 
+    --background-color-body: linear-gradient(to right, rgb(122, 66, 122), rgb(104, 50, 104), rgb(104, 50, 104), rgb(104, 50, 104), rgb(122, 66, 122)); /*rgb(160, 122, 160)*/
+    --color-scrollbar-thumb: rgb(133, 86, 133);
+    --color-scrollbar-thumb-hover: rgb(90, 52, 90);
+    --color-text-shadow-topo: rgb(115 88 53);
+    --bs-color-cx-01: #dea69459;
+    --bg-color-bkg-opaco: rgb(1 1 1 / 33%);
+    --color-bd-box: rgba(255, 255, 255, 0.3);
+    --color-cx-interna: #fff;
+    --color-menu: rgb(122, 66, 122);
+    --ts-color-menu: rgb(129, 82, 129);
+    --bd-color-tooltip-after:rgb(230, 152, 123);
+    
+    --bd-color-tooltip: purple;
+    --color-scrollbar-track: purple;
+    --bg-color-rodape: #4e024e;
+
+    --color-txt-categoria: rgb(241, 135, 96);
+    --bg-color-cx-topo: rgb(241, 135, 96);
+    --bd-color-cx-topo: rgb(241, 135, 96);
+    --color-rodape: rgb(241, 135, 96);
+
+    --bd-color-menu: rgba(128, 0, 128);
+    --color-tooltip: rgba(128, 0, 128);
+
+    --bg-color-menu: rgb(230 151 123 / 84%);
+    --bg-color-tooltip: rgb(230 151 123 / 84%);
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -11,12 +79,12 @@ body {
     font-variant: normal;
     max-width: max-content;
     max-height: max-content;
-    color: purple;
+    color: var(--cor-font-body);
     text-align: left;
     text-indent: 1px;
     margin: 0px;
+    background-image: var(--background-color-body);
     
-    background-image: linear-gradient(to right, rgb(226, 181, 164),rgb(230, 151, 123), rgb(230, 151, 123),rgb(230, 151, 123), rgb(226, 181, 164));
     /* animation: rotate-bg-color 10s infinite; */
 }
 
@@ -74,16 +142,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: purple; /* Cor da faixa de rolagem */
+  background: var(--color-scrollbar-track); /* Cor da faixa de rolagem */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(133, 86, 133); /* Cor do "thumb" (a parte que se move) */
+  background: var(--color-scrollbar-thumb); /* Cor do "thumb" (a parte que se move) */
   border-radius: 6px; /* Borda arredondada */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(90, 52, 90); /* Cor do "thumb" ao passar o mouse */
+  background: var(--color-scrollbar-thumb-hover); /* Cor do "thumb" ao passar o mouse */
 }
 
 main{
@@ -121,7 +189,7 @@ div.tm-linha{
 div#topo{
     width: 100%;
     margin-top: 10%;
-    text-shadow: 3px 3px 5px rgb(132, 77, 204);
+    text-shadow: 3px 3px 5px var(--color-text-shadow-topo);
     font-size: 300%;
     display: inline-flex;
 }
@@ -133,7 +201,17 @@ div#titulo{
     animation: nudge 5s linear infinite alternate;
 }
 
-div#titulo:hover{
+div.bt-tema-cor{
+    width: 15%; 
+    font-size: 09pt;
+}
+
+img#muda-tema-cor{
+    width: 55%;
+    border-radius: 35%;
+}
+
+img#muda-tema-cor:hover{
     cursor: pointer;
 }
 
@@ -157,10 +235,7 @@ div#titulo:hover{
 }
 
 .txt-categoria{
-    /*text-decoration: underline wavy coral;*/
-    text-decoration-line: underline;
-	text-decoration-color: purple; 
-    text-decoration-style: solid;
+    text-decoration: underline wavy var(--color-txt-categoria);
     text-decoration-thickness: 2px; 
     font-size:40pt;
     font-style:oblique;
@@ -263,20 +338,20 @@ div.cx-topo{
     margin-top: 0;
     height: 25%;
     width: 100%;
-    color: purple;
-    background-color: rgb(241, 135, 96); 
-    border-bottom: 2px solid purple;
+    color: var(--bd-color-cx-topo);
+    background-color: var(--bg-color-cx-topo); 
+    border-bottom: 2px solid var(--bd-color-cx-topo);
     padding-bottom: 15px;
     padding-top: 15px;
-    border-radius: 35px 35px 0 0;
+    border-radius: 16px 16px 0 0;
 }
 
 div.cx-01{    
-    border-top: 2px solid purple;
-    border-right: 2px solid purple;
-    border-bottom: 2px solid purple;
-    border-left: 2px solid purple;
-    box-shadow: 1px 1px 4px 4px rgb(115 88 53); /*141 122 165*/;
+    border-top: 2px solid var(--bd-color-cx-topo);
+    border-right: 2px solid var(--bd-color-cx-topo);
+    border-bottom: 2px solid var(--bd-color-cx-topo);
+    border-left: 2px solid var(--bd-color-cx-topo);
+    /*box-shadow: 1px 1px 4px 4px var(--bs-color-cx-01); /*141 122 165;*/
     width: 100%;
     height: 50%;
     margin-bottom: 20px;
@@ -287,18 +362,50 @@ div.cx-interna{
     width: fit-content;
     margin-top: 0;
     padding: 18px 13px 18px 13px;
-    text-align: -webkit-match-parent;
+    text-align: justify; /*-webkit-match-parent;*/
     background-color: transparent;
-    color: rgb(241, 135, 96);
+    color: var(--color-cx-interna);
 }
 
-div.bkg-opaco{
-    position: relative;
+.panels {
     overflow: hidden;
-    unicode-bidi: isolate;
-    background-color: rgba(128, 0, 128); 
-    /*backdrop-filter: blur(20px) saturate(1.5);*/
-    border-radius: 0 0 35px 35px;    
+    width: 100%;
+    height: 50%;
+    margin: 48px auto 0;
+    position: relative;
+}
+
+.cssPanel:after {
+    opacity: 0;
+    transition: opacity .25s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    font-size: 24px;
+    font-weight: 600;
+    background: rgba(210, 78, 145, .8);
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+}
+
+.glass-initial
+{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid var(--color-bd-box); 
+}
+
+.panel {
+    margin-bottom: 18px;
+    padding: 14px 18px;
 }
 
 div.blocos{
@@ -335,9 +442,9 @@ p.blocos{
 div#rodape{
     padding: 5px;
     position: static;
-    border-top: 2px solid purple;
-    background-color: purple;
-    color: rgb(241, 135, 96);
+    border-top: 2px solid var(--bg-color-rodape);
+    background-color: var(--bg-color-rodape);
+    color: var(--color-rodape);
     font-size: 13pt;
     left: 0;
     bottom: 0;
@@ -428,8 +535,8 @@ ul.horizontal {
     padding: 0;
     overflow: hidden;
     max-width: 75%;
-    border: 1px solid rgba(128, 0, 128);
-    background-color: rgb(230 151 123 / 84%);
+    border: 1px solid var(--bd-color-menu);
+    background-color: var(--bg-color-menu);
     backdrop-filter: blur(20px) saturate(1.5);
 }
 
@@ -462,8 +569,8 @@ ul.horizontal li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    color: rgba(128, 0, 128);
-    text-shadow: 1px 1px 3px rgb(143, 44, 143);
+    color: var(--color-menu);
+    text-shadow: 1px 1px 3px var(--ts-color-menu);
 }
 
 ul.horizontal li a:hover{
@@ -484,17 +591,15 @@ ul.horizontal li a:hover{
 .tooltip {
     position: relative;
     display: inline-block;
-    /*border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
-    /*border: 1px solid rgba(128, 0, 128);*/
 }
 
 .tooltip .tooltiptext {
     visibility: hidden;
     position: absolute;
     width: auto;
-    background-color: rgba(230, 152, 123, 0.836);
-    border: 1px dotted purple;
-    color: rgba(128, 0, 128);
+    background-color: var(--bg-color-tooltip);
+    border: 1px dotted var(--bd-color-tooltip);
+    color: var(--color-tooltip);
     text-align: center;
     padding: 5px;
     border-radius: 6px;
@@ -525,5 +630,5 @@ ul.horizontal li a:hover{
     margin-left: -5px;
     border-width: 5px;
     border-style: solid;
-    border-color: rgb(230, 152, 123) transparent transparent transparent;
+    border-color: var(--bd-color-tooltip-after) transparent transparent transparent;
 }
