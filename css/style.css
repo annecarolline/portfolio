@@ -248,7 +248,7 @@ img#muda-tema-cor:hover{
 }
 
 .txt-categoria{
-    text-decoration: underline wavy var(--color-txt-categoria);
+    /*text-decoration: underline wavy var(--color-txt-categoria);*/
     text-decoration-thickness: 2px; 
     font-size:40pt;
     font-style:oblique;
@@ -295,14 +295,30 @@ div.txt{
 }
 
 div.lnk{
-    margin-top: 0;
-    margin-left: 10px;
-    max-width: fit-content;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    float: left;
+    padding: 15px 15px 15px 15px;
+    width: 30%;
 }
 
 div.img{
     display: grid;
     opacity: 0.7;
+}
+
+div.img_titulo{
+    position: absolute;
+    right: 155px;
+    top: 20px;
+    width: 10%;
+}
+
+img.img_animada{
+    border-radius: 35%;
+    width: 100%;
+    cursor: pointer;
 }
 
 @keyframes rotacao{
@@ -330,7 +346,7 @@ img.logo:hover{
 }
 
 img.icone{
-    width: 250%;
+    width: 100%;
     cursor: pointer;
     transition: transform 2s;
 }
@@ -571,7 +587,7 @@ a {
 
 a.linkrodape{
     display: block;
-    width: auto;
+    width: 30%;
     margin-top: 0;
     margin-bottom: 10px;
     margin-right: 25px;
@@ -607,6 +623,7 @@ ul.horizontal li a:hover{
 }
 
 .tooltip .tooltiptext {
+    font-size: xx-small;
     visibility: hidden;
     position: absolute;
     width: auto;
