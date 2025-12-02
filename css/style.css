@@ -79,9 +79,9 @@ html{
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI';
     font-style: normal;
-    font-size: 16pt;
+    font-size: 13pt;
     font-weight:400;
     font-display: auto;
     font-variant: normal;
@@ -96,41 +96,47 @@ body {
     /* animation: rotate-bg-color 10s infinite; */
 }
 
-/* @keyframes rotate-bg-color {
-    0% {
-        background-color: rgb(161, 197, 226);
-    }
-    10% {
-        background-color: rgb(228, 162, 162);
-    }
-    20% {
-        background-color: rgb(233, 182, 123);
-    }
-    30% {
-        background-color: rgb(241, 230, 125);
-    }
-    40% {
-        background-color: rgb(184, 226, 128);
-    }
-    50% {
-        background-color: rgb(143, 159, 230);
-    }
-    60% {
-        background-color: rgb(208, 156, 243);
-    }
-    70% {
-        background-color: rgb(230, 162, 230);
-    }
-    80% {
-        background-color: rgb(236, 142, 221);
-    }
-    90% {
-        background-color: rgb(139, 100, 100);
-    }
-    100% {
-        background-color: rgb(71, 65, 65);
-    }
-} */
+/* <weight>: Use a value from 100 to 400
+<uniquifier>: Use a unique and descriptive class name*/
+.playwrite-in-indian {
+    font-family: "Playwrite IN", cursive;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* <weight>: Use a value from 100 to 400
+<uniquifier>: Use a unique and descriptive class name*/
+.playwrite-gb-s-eng {
+    font-family: "Playwrite GB S", cursive;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.delius-swash-caps-regular {
+    font-family: "Delius Swash Caps", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.bubblegum-sans-regular {
+    font-family: "Bubblegum Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.chicle-regular {
+    font-family: "Chicle", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.vast-shadow-regular {
+    font-family: "Vast Shadow", serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
 .digitando{
     animation: digitando 2s steps(40, end);
@@ -201,7 +207,7 @@ div.tm-linha{
 
 div#topo{
     width: 100%;
-    margin-top: 10%;
+    margin-top: 5%;
     text-shadow: 3px 3px 5px var(--color-text-shadow-topo);
     font-size: 300%;
     display: inline-flex;
@@ -274,12 +280,51 @@ img#muda-tema-cor:hover{
     opacity: 1;
     transform: translateY(0);
     animation: fade-in 1.25s ease-in;
+    
 }
 
 @keyframes fade-in {
     0% {
         opacity: 0;
         transform: translateY(50px);
+    }
+}
+
+.slideToast{
+    animation: fadeInSlideIn 0.50s ease-in-out;
+}
+
+@keyframes fadeInSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-120px);
+        display: none; /* Starting display state */
+    }
+    1% {
+        display: block; /* Change display early to allow other animations */
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.colorMark{
+    animation-name: bgColorChange;
+    animation-direction: normal;
+    animation-duration: 1.25s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bgColorChange {
+    0% {
+        background-color: transparent;
+        width: 0%; 
+    }
+    100% {
+        width: 100%; 
+        background-color: var(--cor-font-body);
+        color: var(--color-cx-texto);
     }
 }
 
@@ -387,7 +432,7 @@ div.cx-final{
 div.cx-interna{
     width: fit-content;
     margin-top: 0;
-    padding: 18px 13px 18px 13px;
+    padding: 0px 13px 18px 13px;
     text-align: justify; /*-webkit-match-parent;*/
     background-color: transparent;
     color: var(--color-cx-interna);
@@ -397,7 +442,7 @@ div.cx-interna{
     overflow: hidden;
     width: 100%;
     height: 50%;
-    margin: 48px auto 0;
+    margin: 0px auto 0;
     position: relative;
     text-align: justify;
     display: inline-grid;
@@ -484,18 +529,22 @@ div#rodape{
 }
 
 hr {
-    width: 100%;
+    /*width: 100%;
+    */
+    border-bottom: dotted rgba(255, 255, 255, 0);
     border-top: 0;
     border-right: 0;
     border-left: 0;
-    border-bottom: thick double rgba(255, 255, 255, 0);
     float: left;
-    animation: nudge 5s linear infinite alternate;
+    /*animation: digitando 2s steps(40, end) infinite;*/
+    overflow: hidden;
+    white-space: nowrap;
+    letter-spacing: 3px;
 }
 
 hr::after{
-    content: "----- </> -----";
-    /*content: "<!-- ----- ----- -->";*/
+    content: " ... ";
+    /*content: "< | !-- ----- ----- -->";*/
     display: flex;
     justify-content: center;
     font-size: 23pt;
@@ -559,7 +608,8 @@ ul {
 
 ul.horizontal {
     position: relative;
-    font-family: Arial, Helvetica, sans-serif;
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-weight: bold;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -632,7 +682,7 @@ ul.horizontal li a:hover{
     color: var(--color-tooltip);
     text-shadow: 3px 3px 5px var(--color-text-shadow-topo);
     text-align: center;
-    padding: 5px;
+    padding: 3px;
     border-radius: 6px;
     z-index: 1;
     transition: opacity 6s;
@@ -644,7 +694,7 @@ ul.horizontal li a:hover{
 }
 
 .tooltip-top {
-    bottom: 125%;
+    bottom: 105%;
     left: 50%;
     margin-left: -60px;
 }
