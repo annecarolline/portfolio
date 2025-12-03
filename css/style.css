@@ -7,9 +7,9 @@
     --cor-font-body: rgb(122, 66, 122);
     --background-color-body: linear-gradient(to right, rgb(228, 171, 150), rgb(230, 151, 123), rgb(230, 151, 123), rgb(230, 151, 123), rgb(228, 171, 150));   /*rgb(241, 210, 181);*/
     
-    --bg-color-menu: rgba(255, 255, 255, 0.514); 
-    --bd-color-menu:rgb(230 151 123 / 84%);
-    --ts-color-menu: coral;
+    --bg-color-menu: rgba(228, 174, 155, 0.568); 
+    --bd-color-menu:coral; /*rgb(230 151 123 / 84%)*/
+    --ts-color-menu: rgb(243, 107, 58);
     --color-menu: #fff;
 
     --bd-color-tooltip: coral;
@@ -46,7 +46,7 @@
     --color-menu: #fff; 
     --ts-color-menu: rgb(90, 53, 90);
     --bd-color-menu: rgba(128, 0, 128);
-    --bg-color-menu: rgba(255, 255, 255, 0.514);
+    --bg-color-menu: rgba(168, 128, 190, 0.26);
     
     --bg-color-tooltip: rgb(230 151 123 / 84%);
     --bd-color-tooltip-after:rgb(230, 152, 123);
@@ -593,7 +593,7 @@ nav.menu{
     display: flex;
     justify-content: center;
     width: auto;
-    background-color: rgba(255, 255, 255, 0.411);
+    background-color: var(--bg-color-menu);/*rgba(255, 255, 255, 0.411);*/
     backdrop-filter: blur(20px) saturate(1.5);
 }
 
