@@ -7,9 +7,9 @@
     --cor-font-body: rgb(122, 66, 122);
     --background-color-body: linear-gradient(to right, rgb(228, 171, 150), rgb(230, 151, 123), rgb(230, 151, 123), rgb(230, 151, 123), rgb(228, 171, 150));   /*rgb(241, 210, 181);*/
     
-    --bg-color-menu: rgb(133, 86, 133); 
+    --bg-color-menu: rgba(255, 255, 255, 0.514); 
     --bd-color-menu:rgb(230 151 123 / 84%);
-    --ts-color-menu: rgb(230 151 123 / 84%);
+    --ts-color-menu: coral;
     --color-menu: #fff;
 
     --bd-color-tooltip: coral;
@@ -43,10 +43,10 @@
     --cor-font-body: rgb(229 127 90); 
     --background-color-body: linear-gradient(to right, rgb(122, 66, 122), rgb(104, 50, 104), rgb(104, 50, 104), rgb(104, 50, 104), rgb(122, 66, 122)); /*rgb(160, 122, 160)*/
     
-    --color-menu: rgb(122, 66, 122);
-    --ts-color-menu: rgb(129, 82, 129);
+    --color-menu: #fff; 
+    --ts-color-menu: rgb(90, 53, 90);
     --bd-color-menu: rgba(128, 0, 128);
-    --bg-color-menu: rgb(230 151 123 / 84%);
+    --bg-color-menu: rgba(255, 255, 255, 0.514);
     
     --bg-color-tooltip: rgb(230 151 123 / 84%);
     --bd-color-tooltip-after:rgb(230, 152, 123);
@@ -92,8 +92,6 @@ body {
     text-indent: 1px;
     margin: 0px;
     background-image: var(--background-color-body);
-    
-    /* animation: rotate-bg-color 10s infinite; */
 }
 
 /* <weight>: Use a value from 100 to 400
@@ -594,8 +592,9 @@ nav.menu{
     position: relative;
     display: flex;
     justify-content: center;
-    margin-top: 15px;
     width: auto;
+    background-color: rgba(255, 255, 255, 0.411);
+    backdrop-filter: blur(20px) saturate(1.5);
 }
 
 ul {
@@ -608,16 +607,12 @@ ul {
 
 ul.horizontal {
     position: relative;
-    /*font-family: Arial, Helvetica, sans-serif;*/
     font-weight: bold;
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     max-width: 75%;
-    border: 1px solid var(--bd-color-menu);
-    background-color: var(--bg-color-menu);
-    backdrop-filter: blur(20px) saturate(1.5);
 }
 
 ul.horizontal li {
@@ -654,18 +649,12 @@ ul.horizontal li a {
 }
 
 ul.horizontal li a:hover{
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--bd-color-menu); 
+    border: 1px solid var(--bd-color-menu);
     border-radius: 35px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    /* border: 0px solid rgba(255, 255, 255, 0.3); */
-    /*
-    opacity: 0.9;
-    border-radius: 35px;
-    border: 1px solid rgba(230, 152, 123, 0.836);
-    background-color: rgba(230, 168, 146, 0.836);
-    */
 }
 
 .tooltip {
@@ -695,7 +684,11 @@ ul.horizontal li a:hover{
 
 .tooltip-top {
     bottom: 105%;
-    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip-bottom {
+    bottom: 20%;
     margin-left: -60px;
 }
 
@@ -703,7 +696,7 @@ ul.horizontal li a:hover{
     visibility: visible;
 }
 
-.tooltip .tooltiptext::after {
+/*.tooltip .tooltiptext::after {
     content: " ";
     position: absolute;
     top: 100%; 
@@ -712,4 +705,4 @@ ul.horizontal li a:hover{
     border-width: 5px;
     border-style: solid;
     border-color: var(--bd-color-tooltip-after) transparent transparent transparent;
-}
+}*/
