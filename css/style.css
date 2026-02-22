@@ -26,8 +26,8 @@
     --bs-color-cx-01: #dea69459;
     --bg-color-bkg-opaco: rgba(0, 0, 0, 0.4); 
     --color-bd-box: rgba(255, 255, 255, 0.3);
-    --bg-color-cx-texto:rgb(241, 135, 96);
-    --bd-color-cx-texto:rgb(241, 135, 96);
+    --bg-color-cx-texto: transparent; /*rgb(241, 135, 96);*/
+    --bd-color-cx-texto: transparent; /*rgb(241, 135, 96);*/
     --color-cx-texto: #fff;
         
     --color-scrollbar-track: rgb(241, 135, 96);
@@ -66,8 +66,8 @@
     --color-bd-box: rgba(255, 255, 255, 0.3);
     --color-cx-interna: #fff;
     --color-txt-categoria: rgb(241, 135, 96);
-    --bg-color-cx-texto:#542654;
-    --bd-color-cx-texto:#542654;
+    --bg-color-cx-texto: transparent; /*#542654;*/
+    --bd-color-cx-texto: transparent; /*#542654;*/
     --color-cx-texto: #fff;
     
     --bg-color-rodape: #4e024e;
