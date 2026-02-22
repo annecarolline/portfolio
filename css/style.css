@@ -652,9 +652,11 @@ a.linkrodape{
 }
 
 ul.horizontal li a {
+    border: 1px solid transparent;
     display: inline-block;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 10px;
+    margin: 5px 5px;
     text-decoration: none;
     color: var(--color-menu);
     text-shadow: 1px 1px 3px var(--ts-color-menu);
