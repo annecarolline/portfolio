@@ -101,3 +101,63 @@ const dados2 = {
 
 criarOuAtualizarGraf(dados1,'chart1');
 criarOuAtualizarGraf(dados2,'chart2');
+
+/**
+   * Aplica o efeito glitch ao elemento HTML fornecido.
+   * @param {HTMLElement} el
+*/
+function glitch(el) {
+    // Salva o texto original
+    if (!el.dataset.glitch) el.dataset.glitch = el.innerText;
+
+    // Separa o texto em palavras
+    const text = el.dataset.glitch;
+    const words = text.split(' ');
+
+    // Acha o tamanho da maior palavra, para definir quando parar o interval
+    const stop = Math.max(...words.map((w) => w.length));
+
+    // Limpa o interval anterior, se existir
+    if (el.dataset.interval) clearInterval(Number(el.dataset.interval));
+
+    // Mínimo de vezes que uma letra anima
+    let min = 5;
+
+    let iterations = 0;
+
+    const interval = setInterval(() => {
+        // Reconstroi o texto a cada intervalo com números aleatórios
+        el.innerText = words
+            .map((word) => {
+              return word
+                .split('')
+                .map((letter, index) => {
+                  // retorna a letra ou o número aleatório.
+                  // cria um efeito de onda na animação com o ||
+                  if (iterations > index + min || index > iterations) {
+                    return letter;
+                  } else {
+                    return Math.floor(Math.random() * 10);
+                  }
+                })
+                .join('');
+            })
+            .join(' '); // junta as palavras
+
+        el.dataset.interval = String(interval);
+
+        iterations++;
+        // Para quando o total de iterações for maior que a maior palavra
+        if (iterations >= stop + min) {
+            clearInterval(Number(el.dataset.interval));
+            el.innerText = text; // Volta ao estado inicial
+        }
+    }, 95); // Velocidade da animação
+}
+
+const glitchEl = document.querySelectorAll('.ef-glitch');
+glitchEl.forEach((el) => {
+    el.addEventListener('mouseover', () => {
+        glitch(el);
+    });
+});
