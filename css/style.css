@@ -5,7 +5,7 @@
 .light{
     color-scheme: light;
     --cor-font-body: rgb(122, 66, 122);
-    --background-color-body: linear-gradient(to right, rgb(228, 171, 150), rgb(230, 151, 123), rgb(230, 151, 123), rgb(224, 144, 116), rgb(231, 123, 89));   /*rgb(241, 210, 181);*/
+    --background-color-body: linear-gradient(to right, rgb(228, 171, 150), rgb(230, 151, 123), rgb(224, 144, 116), rgb(220.13 130.13 98.625), rgb(231, 123, 89));   /*rgb(241, 210, 181);*/
     
     --bg-color-menu: rgba(228, 174, 155, 0.568); 
     --bd-color-menu: #f2865f; /*coral -> #ff7f50; /*rgb(230 151 123 / 84%) */
@@ -21,7 +21,7 @@
     --bd-color-cx-topo: rgb(133, 86, 133);
     --color-text-shadow-topo: rgb(132, 77, 204);
     
-    --color-txt-categoria: rgb(122, 66, 122);
+    --color-txt-categoria: #fff;
     --color-cx-interna: rgb(122, 66, 122);
     --bs-color-cx-01: #dea69459;
     --bg-color-bkg-opaco: rgba(0, 0, 0, 0.4); 
@@ -41,7 +41,7 @@
 .dark{
     color-scheme: dark;
     --cor-font-body: rgb(229 127 90); 
-    --background-color-body: linear-gradient(to right, rgb(122, 66, 122), rgb(104, 50, 104), rgb(104, 50, 104), rgb(102 42 102), rgb(84 30 84)); /* rgb(122, 66, 122) rgb(160, 122, 160)*/
+    --background-color-body: linear-gradient(to right, rgb(144.79 78.331 144.79), rgb(134 70 135), rgb(122, 66, 122), rgb(102 42 102), rgb(84 30 84)); /* rgb(122, 66, 122) rgb(160, 122, 160)*/
     
     --color-menu: #ab7ed5; /*#fff; */
     --ts-color-menu: rgb(90, 53, 90);
@@ -65,7 +65,7 @@
     --bg-color-bkg-opaco: rgb(1 1 1 / 33%);
     --color-bd-box: rgba(255, 255, 255, 0.3);
     --color-cx-interna: #fff;
-    --color-txt-categoria: rgb(241, 135, 96);
+    --color-txt-categoria: #fff;
     --bg-color-cx-texto: transparent; /*#542654;*/
     --bd-color-cx-texto: transparent; /*#542654;*/
     --color-cx-texto: #fff;
@@ -81,7 +81,7 @@ html{
 body {
     font-family: 'Segoe UI';
     font-style: normal;
-    font-size: 13pt;
+    font-size: 16pt;
     font-weight:400;
     font-display: auto;
     font-variant: normal;
@@ -212,7 +212,7 @@ div#topo{
 }
 
 div#titulo{
-    color: var(--color-cx-texto);
+    color: var(--color-txt-categoria);
     width: 100%;
     margin-top: 45px;
     margin-left: 20px;
@@ -252,11 +252,16 @@ img#muda-tema-cor:hover{
     justify-content: center;
 }
 
+main h2{
+    color: var(--color-txt-categoria);
+}
+
 .txt-categoria{
     /*text-decoration: underline wavy var(--color-txt-categoria);*/
     text-decoration-thickness: 2px; 
     font-size:40pt;
     font-style:oblique;
+    text-shadow: 0 0 5px #fff, 0 0 10px var(--color-text-shadow-topo), 0 0 15px var(--color-text-shadow-topo);
 }
 
 .txt-categoria:hover{
@@ -323,7 +328,7 @@ img#muda-tema-cor:hover{
     100% {
         width: 100%; 
         background-color: var(--cor-font-body);
-        color: var(--color-cx-texto);
+        color: var(--color-txt-categoria);
     }
 }
 
@@ -404,7 +409,7 @@ div.cx-topo{
     margin-top: 0;
     height: 25%;
     width: 100%;
-    color: var(--bd-color-cx-topo);
+    /*color: var(--bd-color-cx-topo);*/
     background-color: var(--bg-color-cx-topo); 
     border-bottom: 2px solid var(--bd-color-cx-topo);
     padding-bottom: 15px;
@@ -417,7 +422,6 @@ div.cx-texto{
     padding: 10px;
     background-color: var(--bg-color-cx-texto);
     border: 1px solid var(--bd-color-cx-texto);
-    color: var(--color-cx-texto);
 }
 
 div.cx-final{    
@@ -425,7 +429,6 @@ div.cx-final{
     padding: 10px;
     background-color: #fff;
     border: 1px solid #fff;
-    color: var(--cor-font-body);
 }
 
 div.cx-interna{
@@ -434,7 +437,6 @@ div.cx-interna{
     padding: 0px 13px 18px 13px;
     text-align: justify; /*-webkit-match-parent;*/
     background-color: transparent;
-    color: var(--color-cx-interna);
 }
 
 .paineis {
