@@ -1,10 +1,13 @@
 :root{
     color-scheme: light dark;
+
+    --branco: #fff;
 }
 
 .light{
     color-scheme: light;
     --cor-font-body: rgb(122, 66, 122);
+    --txt-sombra: #808080;
     --background-color-body: linear-gradient(to right, rgb(228, 171, 150), rgb(230, 151, 123), rgb(224, 144, 116), rgb(220.13 130.13 98.625), rgb(231, 123, 89));   /*rgb(241, 210, 181);*/
     
     --bg-color-menu: rgba(228, 174, 155, 0.568); 
@@ -45,7 +48,8 @@
 
 .dark{
     color-scheme: dark;
-    --cor-font-body: rgb(229 127 90); 
+    --cor-font-body: rgb(248.03, 117.07, 38.848); /* #f25921; rgb(229 127 90);   */
+    --txt-sombra: #fff;
     --background-color-body: linear-gradient(to right, rgb(144.79, 78.331, 144.79), rgb(134, 70, 135), rgb(122, 66, 122), rgb(102 42 102), rgb(84 30 84)); /* rgb(122, 66, 122) rgb(160, 122, 160)*/
     
     --color-menu: #ab7ed5; /*#fff; */
@@ -69,7 +73,7 @@
     --bs-color-cx-01: #dea69459;
     --bg-color-bkg-opaco: rgb(1 1 1 / 33%);
     --color-bd-box: rgba(255, 255, 255, 0.3);
-    --color-cx-interna: #fff;
+    --color-cx-interna: #f25921;;
     --color-txt-categoria: #fff;
     --bg-color-cx-texto: transparent; /*#542654;*/
     --bd-color-cx-texto: transparent; /*#542654;*/
@@ -100,6 +104,7 @@ body {
     color: var(--cor-font-body);
     text-align: left;
     text-indent: 1px;
+    line-height: 2.1;
     margin: 0px;
     background-image: var(--background-color-body);
 }
@@ -215,7 +220,7 @@ div.tm-linha{
 
 div#topo{
     width: 100%;
-    margin-top: 5%;
+    margin-top: 13%;
     text-shadow: 3px 3px 5px var(--color-text-shadow-topo);
     font-size: 300%;
     display: inline-flex;
@@ -271,7 +276,7 @@ main h2{
     text-decoration-thickness: 2px; 
     font-size:40pt;
     font-style:oblique;
-    text-shadow: 0 0 5px #fff, 0 0 10px var(--color-text-shadow-topo), 0 0 15px var(--color-text-shadow-topo);
+    text-shadow: 0 0 5px var(--branco), 0 0 10px var(--color-text-shadow-topo), 0 0 15px var(--color-text-shadow-topo);
 }
 
 .txt-categoria:hover{
@@ -326,7 +331,7 @@ main h2{
 .colorMark{
     animation-name: bgColorChange;
     animation-direction: normal;
-    animation-duration: 1.25s;
+    animation-duration: 2.25s;
     animation-fill-mode: forwards;
 }
 
@@ -437,8 +442,8 @@ div.cx-texto{
 div.cx-final{    
     margin: 0;
     padding: 10px;
-    background-color: #fff;
-    border: 1px solid #fff;
+    background-color: var(--branco);
+    border: 1px solid var(--branco);
 }
 
 div.cx-interna{
@@ -447,6 +452,11 @@ div.cx-interna{
     padding: 0px 13px 18px 13px;
     text-align: justify; /*-webkit-match-parent;*/
     background-color: transparent;
+    color: var(--color-cx-interna);
+}
+
+div.cx.interna, p, h3{
+    text-shadow: -0.3px 0.4px 1px var(--txt-sombra);
 }
 
 .paineis {
@@ -504,37 +514,16 @@ div.cx-interna{
     margin-bottom: 18px;
     padding: 14px 18px;
 }
-
-div.blocos{
-    border: 1px solid coral;
-    text-align: left;
+/*
+.txt-descricao {
+  padding: 5px 5px 0;
+  transition: 0.3s;
+  text-decoration: none;
 }
 
-details {
-    display: block;
-    
-}
-
-details[open] > summary:first-of-type {
-    list-style-type:none;
-    /*disclosure-open;*/
-}
-
-details > summary:first-of-type {
-    display: list-item;
-    counter-increment: list-item 0;
-    list-style: outside disclosure-closed none;
-}
-
-summary {
-    display: block;
-    unicode-bidi: isolate;
-}
-
-p.blocos{
-    margin-block-start: 0;
-    margin-block-end: 0;
-}
+.txt-descricao:hover {
+  box-shadow: inset 0 -1.3em 0 0 #9e88f7;
+}*/
 
 div#rodape{
     display: grid;
